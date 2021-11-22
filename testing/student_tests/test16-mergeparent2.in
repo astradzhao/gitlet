@@ -1,0 +1,49 @@
+# Test parent 2 ID
+I setup2.inc
+> branch other
+<<<
+> branch other2
+<<<
+> checkout other
+<<<
++ a.txt a.txt
+> add a.txt
+<<<
+> commit "added a"
+<<<
+> checkout master
+<<<
++ b.txt b.txt
+> add b.txt
+<<<
+> commit "added b"
+<<<
+> checkout other2
+<<<
+- f.txt
++ g.txt abc.txt
+> rm f.txt
+<<<
+> add g.txt
+<<<
+> commit "modified g, removed f"
+<<<
+> merge master
+<<<
+= b.txt b.txt
+* f.txt
+= g.txt abc.txt
+> checkout other
+<<<
+> merge master
+<<<
+E a.txt
+E b.txt
+= g.txt notwug.txt
+= f.txt wug.txt
+> merge other2
+<<<
+= g.txt abc.txt
+* f.txt
+= a.txt a.txt
+= b.txt b.txt

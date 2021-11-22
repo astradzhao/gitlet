@@ -1,0 +1,50 @@
+I standard-setup.inc
++ test2.txt b.txt
++ test3.txt b.txt
+> add test2.txt
+<<<
+> add test3.txt
+<<<
+> commit "added tests"
+<<<
+- test.txt
+> rm test.txt
+<<<
+> commit "deleted original"
+<<<
+> log
+===
+${COMMIT_HEAD}
+deleted original
+
+===
+${COMMIT_HEAD}
+added tests
+
+===
+${COMMIT_HEAD}
+test created
+
+===
+${COMMIT_HEAD}
+initial commit
+
+<<<*
+D UID1 "${3}"
+D UID2 "${2}"
+D UID3 "${1}"
+> reset ${UID1}
+<<<
+> status
+=== Branches ===
+\*master
+
+=== Staged Files ===
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<*

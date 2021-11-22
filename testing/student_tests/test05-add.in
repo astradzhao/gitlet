@@ -1,0 +1,8 @@
+# Basic addition of file
+> init
+<<<
++ wug.txt wug.txt
+> add wug.txt
+<<<
+E .gitlet
+E .gitlet/addStage/wug.txt
